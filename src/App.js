@@ -62,7 +62,7 @@ class App extends React.Component {
                   !this.state.open &&
                   (this.state.loser === ''
                     ? true
-                    : this.state.loser === 'w' && false)
+                    : this.state.loser === 'b' && false)
                 }
                 enter='transition-all transform duration-150'
                 enterFrom='rounded-none scale-0'
@@ -136,7 +136,7 @@ class App extends React.Component {
                   !this.state.open &&
                   (this.state.loser === ''
                     ? false
-                    : this.state.loser === 'w' && true)
+                    : this.state.loser === 'b' && true)
                 }
                 enter='transition-opacity duration-150'
                 enterFrom='opacity-0'
