@@ -237,6 +237,7 @@ class Stockfish extends Component {
       start: function () {
         uciCmd('ucinewgame')
         uciCmd('isready')
+        uciCmd('setoption name Skill Level value 3')
         engineStatus.engineReady = false
         engineStatus.search = null
         prepareMove()

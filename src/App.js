@@ -52,7 +52,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='grid place-items-center h-full'>
+      <div className='flex flex-col items-center justify-center h-full'>
         <div className='inline-flex items-stretch w-72 justify-between py-2 px-3 border border-gray-300 rounded-[.15rem] shadow-sm bg-[#F9F9F9]'>
           <div className='flex items-center space-x-3'>
             <div className='w-7 h-7'>
@@ -167,6 +167,15 @@ class App extends React.Component {
             handleBlur={() => this.onBlur()}
           />
         </div>
+        <p className='text-sm font-bold mt-3'>{ !this.state.open &&
+                  (this.state.loser === ''
+                    ? ''
+                    : this.state.loser === 'b' && 'good stuff man. ur verified despite losing') }</p>
+        <p className='text-sm font-bold mt-3'>{ !this.state.open &&
+                  (this.state.loser === ''
+                    ? ''
+                    : this.state.loser === 'w' && 'haha I caught you, you can\'t beat a computer u must be a robot') }</p>
+        <p className='text-sm mt-3'>Stockfish skill level: 3</p>
       </div>
     )
   }
